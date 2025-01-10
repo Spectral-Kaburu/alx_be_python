@@ -24,7 +24,7 @@ def main():
 
     except ValueError as e:
         print(f"Error: {e}")
-        print("Invalid temperature. Please enter a numeric value followed by 'C' or 'F'.")
+        print("Invalid temperature. Please enter a numeric value.")
 
 # Entry point of the script
 if __name__ == "__main__":
