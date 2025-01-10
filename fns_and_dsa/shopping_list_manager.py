@@ -10,22 +10,33 @@ def main():
     while True:
         display_menu()
         choice = input("Enter your choice: ")
-        if type(choice) != int:
-            raise ValueError("Invalid input. You should enter a number.")
 
-        if choice == '1':
+        if not choice.isdigit():
+            print("Invalid input. Please enter a number.")
+            continue
+
+        choice = int(choice)  # Convert choice to integer
+
+        if choice == 1:
             # Prompt for and add an item
-            addition = input(str("Enter the item to add: ")).lower()
+            addition = input("Enter the item to add: ").lower()
             shopping_list.append(addition)
-        elif choice == '2':
+        elif choice == 2:
             # Prompt for and remove an item
-            remove = input(str("Enter the item to be removed: ")).lower()
-            shopping_list.remove(remove)
-        elif choice == '3':
+            remove = input("Enter the item to be removed: ").lower()
+            if remove in shopping_list:
+                shopping_list.remove(remove)
+            else:
+                print(f"{remove} is not in the shopping list.")
+        elif choice == 3:
             # Display the shopping list
-            for i in shopping_list:
-                print(i)
-        elif choice == '4':
+            if shopping_list:
+                print("Shopping List:")
+                for i in shopping_list:
+                    print(f"- {i}")
+            else:
+                print("The shopping list is empty.")
+        elif choice == 4:
             print("Goodbye!")
             break
         else:
@@ -33,4 +44,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
