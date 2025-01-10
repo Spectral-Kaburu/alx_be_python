@@ -6,7 +6,7 @@ def perform_operation(num1, num2, operation):
             if num2 == 0:
                 print("Invalid input. You cannot divide by 0.")
                 pass
-            else:
+            elif num2 != 0:
                 return num1 / num2
         case "subtract":
             return num1 - num2
