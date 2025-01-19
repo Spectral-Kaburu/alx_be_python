@@ -4,8 +4,10 @@ def safe_divide(numerator, denominator):
         denominator = float(denominator)
         if denominator == 0:
             print("Error: Cannot divide by zero.")
+            return
         else:
             answer = numerator / denominator
             print(f"The result of the division is {answer}")
     except ValueError:
         print("Error: Please enter numeric values only.")
+        return
