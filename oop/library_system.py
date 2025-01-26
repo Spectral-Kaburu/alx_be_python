@@ -1,4 +1,4 @@
-class Book():
+class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author
@@ -25,7 +25,7 @@ class PrintBook(Book):
         return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
     
 
-class Library():
+class Library:
     def __init__(self):
         self.books = []
 
