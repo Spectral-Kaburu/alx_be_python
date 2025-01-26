@@ -1,11 +1,11 @@
 import math
 
 
-class shape:
+class Shape:
     def area(self):
         NotImplementedError("The area() method should be overridden in a subclass")
 
-class rectangle(shape):
+class Rectangle(Shape):
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -13,7 +13,7 @@ class rectangle(shape):
     def area(self):
         return self.width * self.height
 
-class circle(shape):
+class Circle(Shape):
     def __init__(self, radius):
         self.radius = radius
 
